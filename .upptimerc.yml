@@ -1,31 +1,26 @@
-# Change these first
-owner: upptime # Your GitHub organization or username, where this repository lives
-repo: upptime # The name of this repository
+# Upptime: uptime checks every 5 minutes from GitHub Actions, status page on
+# GitHub Pages at status.karan-s.com. Infra lives in karan-sss/project-infra.
+owner: karan-sss
+repo: status
 
 sites:
-  - name: Google
-    url: https://www.google.com
-  - name: Wikipedia
-    url: https://en.wikipedia.org
-  - name: Hacker News
-    url: https://news.ycombinator.com
-  - name: Secret Site
-    url: $SECRET_SITE
+  - name: Portfolio
+    url: https://karan-s.com
+    expectedStatusCodes:
+      - 200
+
+assignees:
+  - karan-sss
 
 status-website:
-  # Add your custom domain name, or remove the `cname` line if you don't have a domain
-  # Uncomment the `baseUrl` line if you don't have a custom domain and add your repo name there
-  cname: demo.upptime.js.org
-  # baseUrl: /your-repo-name
-  logoUrl: https://raw.githubusercontent.com/upptime/upptime.js.org/master/static/img/icon.svg
-  name: Upptime
-  introTitle: "**Upptime** is the open-source uptime monitor and status page, powered entirely by GitHub."
-  introMessage: This is a sample status page which uses **real-time** data from our [GitHub repository](https://github.com/upptime/upptime). No server required — just GitHub Actions, Issues, and Pages. [**Get your own for free**](https://github.com/upptime/upptime)
+  cname: status.karan-s.com
+  name: karan-s.com status
+  introTitle: "Status of **karan-s.com**"
+  introMessage: Self-hosted on one Hetzner ARM server behind Cloudflare. Checked every 5 minutes from GitHub Actions. Infrastructure as code in [project-infra](https://github.com/karan-sss/project-infra).
   navbar:
     - title: Status
       href: /
+    - title: Infrastructure
+      href: https://github.com/karan-sss/project-infra
     - title: GitHub
       href: https://github.com/$OWNER/$REPO
-
-# Upptime also supports notifications, assigning issues, and more
-# See https://upptime.js.org/docs/configuration
